@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Healthy</title>
+<style>
+body {
+    background: linear-gradient(#0f5132,#198754);
+    color:white;
+    font-family:Poppins;
+    text-align:center;
+}
+.card {
+    margin:50px auto;
+    background: rgba(255,255,255,0.1);
+    padding:30px;
+    border-radius:20px;
+    width:400px;
+}
+img {width:220px; border-radius:10px;}
+button {
+    padding:10px 20px;
+    border:none;
+    background:#00c853;
+    color:white;
+    border-radius:20px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>✅ No Malaria Detected</h1>
+
+<img src="{{ user_image }}">
+
+<h2>Confidence: {{ value }}%</h2>
+
+<h3>✔ Stay Safe Tips:</h3>
+<ul style="text-align:left;">
+<li>Use mosquito nets</li>
+<li>Keep surroundings clean</li>
+<li>Avoid stagnant water</li>
+</ul>
+
+<br>
+
+<a href="/download_report/{{status}}/{{value}}">
+<button>Download Report</button>
+</a>
+
+<br><br>
+<a href="/">Check Another</a>
+
+</div>
+
+</body>
+</html>

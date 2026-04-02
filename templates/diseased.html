@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Malaria Detected</title>
+<style>
+body {
+    background: linear-gradient(#7f1d1d,#dc3545);
+    color:white;
+    font-family:Poppins;
+    text-align:center;
+}
+.card {
+    margin:50px auto;
+    background: rgba(255,255,255,0.1);
+    padding:30px;
+    border-radius:20px;
+    width:400px;
+}
+img {width:220px; border-radius:10px;}
+button {
+    padding:10px 20px;
+    border:none;
+    background:#ff1744;
+    color:white;
+    border-radius:20px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>⚠ Malaria Detected</h1>
+
+<img src="{{ user_image }}">
+
+<h2>Confidence: {{ value }}%</h2>
+
+<h3>🚑 Immediate Actions:</h3>
+<ul style="text-align:left;">
+<li>Consult a doctor immediately</li>
+<li>Start prescribed medication</li>
+<li>Drink plenty of fluids</li>
+<li>Take rest</li>
+</ul>
+
+<br>
+
+<a href="/download_report/{{status}}/{{value}}">
+<button>Download Report</button>
+</a>
+
+<br><br>
+<a href="/">Check Another</a>
+
+</div>
+
+</body>
+</html>
