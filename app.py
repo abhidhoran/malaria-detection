@@ -12,8 +12,10 @@ app = Flask(__name__)
 # ==============================
 MODEL_PATH = "malaria_model.h5"
 
+# Google Drive direct download link
 MODEL_URL = "https://drive.google.com/uc?id=1s_nk0OXVgsukkjRvFxb4TCUKou72wzaB"
 
+# Download model if not exists
 if not os.path.exists(MODEL_PATH):
     print("Downloading model...")
     gdown.download(MODEL_URL, MODEL_PATH, quiet=False)
@@ -44,15 +46,18 @@ def predict():
     filepath = os.path.join("static", file.filename)
     file.save(filepath)
 
+    # Image processing
     image = load_img(filepath, target_size=(150, 150))
     img = img_to_array(image)
     img = np.expand_dims(img, axis=0) / 255.0
 
+    # Prediction
     result = model.predict(img)
     confidence = float(result[0][0])
 
     img_path = "/" + filepath
 
+    # Result logic
     if confidence < 0.5:
         status = "Malaria Detected"
         conf = round((1 - confidence) * 100, 2)
