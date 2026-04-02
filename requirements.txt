@@ -1,6 +1,7 @@
 flask
+tensorflow
+keras
 numpy
 pillow
-tensorflow
-reportlab
 gunicorn
+gdown
