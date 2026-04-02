@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [tool.poetry]
 name = "malaria-detection"
 version = "0.1.0"
@@ -11,4 +12,19 @@ tensorflow = "*"
 keras = "*"
 numpy = "*"
 pillow = "*"
+=======
+[tool.poetry]
+name = "malaria-detection"
+version = "0.1.0"
+description = ""
+authors = ["You <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "3.10.*"
+flask = "*"
+tensorflow = "*"
+keras = "*"
+numpy = "*"
+pillow = "*"
+>>>>>>> feac6a6129850ddf3cb6b09ba5336b2c61597068
 gunicorn = "*"
