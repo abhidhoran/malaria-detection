@@ -1,16 +1,6 @@
-<<<<<<< HEAD
 flask
 tensorflow
-keras
 numpy
-pillow
-gunicorn
-=======
-flask
-tensorflow
-keras
-numpy
-pillow
-gunicorn
->>>>>>> feac6a6129850ddf3cb6b09ba5336b2c61597068
 gdown
+reportlab
+gunicorn
